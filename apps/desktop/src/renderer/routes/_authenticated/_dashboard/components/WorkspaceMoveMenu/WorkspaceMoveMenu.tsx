@@ -1,5 +1,7 @@
 import { Trans } from "@lingui/react/macro";
+import { cn } from "@superset/ui/utils";
 import { LuCloudUpload, LuLaptop, LuSend } from "react-icons/lu";
+import type { MenuParts } from "renderer/lib/menuParts";
 import { useLocalHostService } from "renderer/routes/_authenticated/providers/LocalHostServiceProvider";
 import type {
 	MovableWorkspace,
@@ -7,23 +9,22 @@ import type {
 } from "../../hooks/useWorkspaceMoveDirections";
 import { MoveToCloudItems } from "./components/MoveToCloudItems";
 import { MoveToComputerItems } from "./components/MoveToComputerItems";
-import { MOVE_MENU_PRIMITIVES, type MoveMenuKind } from "./constants";
 import { useStartWorkspaceMove } from "./hooks/useStartWorkspaceMove";
 
 interface WorkspaceMoveMenuProps {
-	menu: MoveMenuKind;
+	parts: MenuParts;
 	workspace: MovableWorkspace;
 	directions: WorkspaceMoveDirection[];
 }
 
 /** Move, with a submenu per destination; picking one starts the move. */
 export function WorkspaceMoveMenu({
-	menu,
+	parts,
 	workspace,
 	directions,
 }: WorkspaceMoveMenuProps) {
-	const { Sub, SubTrigger, SubContent, iconClassName } =
-		MOVE_MENU_PRIMITIVES[menu];
+	const { Sub, SubTrigger, SubContent } = parts;
+	const iconClassName = cn("size-4", parts.iconClassName);
 	const { machineId } = useLocalHostService();
 	const startMove = useStartWorkspaceMove(workspace);
 
@@ -42,7 +43,7 @@ export function WorkspaceMoveMenu({
 						</SubTrigger>
 						<SubContent>
 							<MoveToCloudItems
-								menu={menu}
+								parts={parts}
 								projectId={workspace.projectId}
 								onSelectEnvironment={startMove.toCloud}
 							/>
@@ -61,7 +62,7 @@ export function WorkspaceMoveMenu({
 						</SubTrigger>
 						<SubContent>
 							<MoveToComputerItems
-								menu={menu}
+								parts={parts}
 								hostId={workspace.hostId}
 								onSelectComputer={startMove.toComputer}
 							/>

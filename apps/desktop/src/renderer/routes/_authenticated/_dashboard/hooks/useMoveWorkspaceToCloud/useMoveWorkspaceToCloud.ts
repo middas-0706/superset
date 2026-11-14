@@ -1,4 +1,5 @@
 import { useLingui } from "@lingui/react/macro";
+import { keepMoveAlive } from "@superset/shared/move-book";
 import { useCallback } from "react";
 import { useHostProjects } from "renderer/hooks/host-projects/useHostProjects";
 import { useActiveOrganizationId } from "renderer/hooks/useActiveOrganizationId";
@@ -15,7 +16,6 @@ import {
 	mergeHandoffs,
 	skippedTerminalNames,
 } from "../../utils/handOffTerminals";
-import { keepMoveAlive } from "../../utils/keepMoveAlive";
 import { releaseSourceChats } from "../../utils/releaseSourceChats";
 import { releaseSourceTerminals } from "../../utils/releaseSourceTerminals";
 import type { MovableWorkspace } from "../useWorkspaceMoveDirections";

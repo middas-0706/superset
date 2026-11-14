@@ -1,13 +1,15 @@
 import { Trans, useLingui } from "@lingui/react/macro";
+import { listMoveDestinationComputers } from "@superset/shared/move-book";
+import { cn } from "@superset/ui/utils";
 import { useMemo } from "react";
 import { LuLaptop } from "react-icons/lu";
 import { useKnownHosts } from "renderer/hooks/known-hosts/useKnownHosts";
 import { useCloudWorkspaces } from "renderer/hooks/useCloudWorkspaces";
+import type { MenuParts } from "renderer/lib/menuParts";
 import { useLocalHostService } from "renderer/routes/_authenticated/providers/LocalHostServiceProvider";
-import { MOVE_MENU_PRIMITIVES, type MoveMenuKind } from "../../constants";
 
 interface MoveToComputerItemsProps {
-	menu: MoveMenuKind;
+	parts: MenuParts;
 	/** The computer the workspace is on now, which is never a destination. */
 	hostId: string;
 	onSelectComputer: (destination: {
@@ -17,37 +19,31 @@ interface MoveToComputerItemsProps {
 }
 
 export function MoveToComputerItems({
-	menu,
+	parts,
 	hostId,
 	onSelectComputer,
 }: MoveToComputerItemsProps) {
-	const { Item, iconClassName } = MOVE_MENU_PRIMITIVES[menu];
+	const { Item } = parts;
+	const iconClassName = cn("size-4", parts.iconClassName);
 	const { t } = useLingui();
 	const { machineId } = useLocalHostService();
 	const { hosts, settled } = useKnownHosts();
 	const { workspaces: cloudWorkspaces = [], isLoading: cloudLoading } =
 		useCloudWorkspaces();
 
-	const computers = useMemo(() => {
-		const others = hosts
-			.filter(
-				(host) =>
-					host.machineId !== hostId &&
-					host.machineId !== machineId &&
-					!cloudWorkspaces.some((row) => row.id === host.machineId),
-			)
-			.map((host) => ({
-				hostId: host.machineId,
-				name: host.name as string | null,
-				online: host.isOnline,
-			}))
-			.sort((a, b) => Number(b.online) - Number(a.online));
-		const thisComputer =
-			machineId && machineId !== hostId
-				? [{ hostId: machineId, name: null, online: true }]
-				: [];
-		return [...thisComputer, ...others];
-	}, [hosts, hostId, cloudWorkspaces, machineId]);
+	const computers = useMemo(
+		() =>
+			listMoveDestinationComputers({
+				hosts,
+				fromHostId: hostId,
+				thisHostId: machineId ?? null,
+				cloudHostIds: new Set(cloudWorkspaces.map((row) => row.id)),
+			}).map((computer) => ({
+				...computer,
+				name: computer.isThisComputer ? null : computer.name,
+			})),
+		[hosts, hostId, cloudWorkspaces, machineId],
+	);
 
 	if (!settled || cloudLoading) {
 		return (

@@ -10958,6 +10958,9 @@ msgstr "Jeho pluginy se objeví po dokončení synchronizace."
 msgid "Its replies go with it."
 msgstr "Smažou se i odpovědi."
 
+msgid "Its work, including uncommitted changes, is pushed to a new branch. A workspace on {computerName} starts from that branch, and each Claude chat continues there. Agents that are working stop first. Terminals and other chats stay where they are."
+msgstr "Jeho práce včetně necommitnutých změn se odešle do nové větve. Pracovní prostor na {computerName} začne z této větve a každý chat Claude tam bude pokračovat. Agenti, kteří pracují, se nejdřív zastaví. Terminály a ostatní chaty zůstanou, kde jsou."
+
 msgid "Its workspaces and terminals are unavailable until it restarts. Use the Paradev tray menu > Host Service > Restart."
 msgstr "Její pracovní prostory a terminály nebudou dostupné, dokud se nerestartuje. Použijte nabídku Paradev na liště > Host Service > Restart."
 
@@ -12446,8 +12449,20 @@ msgstr "Přesuňte práci z cloudu"
 msgid "Move focus between the main tabs and the right sidebar, and open the sidebar if it is closed"
 msgstr "Přesunout fokus mezi hlavními kartami a pravým postranním panelem a otevřít panel, pokud je zavřený"
 
+msgid "Move this workspace to {computerName}?"
+msgstr "Přesunout tento pracovní prostor na {computerName}?"
+
+msgid "Move this workspace to the cloud?"
+msgstr "Přesunout tento pracovní prostor do cloudu?"
+
+msgid "Move to"
+msgstr "Přesunout do"
+
 msgid "Move to background"
 msgstr "Přesunout na pozadí"
+
+msgid "Move to cloud"
+msgstr "Přesunout do cloudu"
 
 msgid "Move to group"
 msgstr "Přesunout do skupiny"
@@ -12664,6 +12679,9 @@ msgstr "Nový chat"
 
 msgid "New Chat"
 msgstr "Nový chat"
+
+msgid "New cloud workspace"
+msgstr "Nový cloudový pracovní prostor"
 
 msgid "New environment"
 msgstr "Nové prostředí"
@@ -12955,6 +12973,9 @@ msgstr "Nebyl nalezen Chrome, Brave, Arc ani jiný prohlížeč založený na Ch
 
 msgid "No Claude or Codex usage found on this machine yet. Join now and you'll appear once you've used an agent."
 msgstr "Na tomto počítači zatím nebylo nalezeno žádné využití Claude ani Codex. Připojte se a objevíte se, jakmile použijete agenta."
+
+msgid "No cloud environment opens {repository}."
+msgstr "Žádné cloudové prostředí neotevírá {repository}."
 
 msgid "No cloud workspaces"
 msgstr "Žádné cloudové pracovní prostory"
@@ -15257,6 +15278,9 @@ msgstr "Vyberte pracovní prostor"
 
 msgid "Pick a workspace whose agent is waiting for your input, has finished since you last looked, or is still running"
 msgstr "Vyberte pracovní prostor, jehož agent čeká na váš vstup, od vaší poslední návštěvy dokončil práci, nebo stále běží"
+
+msgid "Pick an environment"
+msgstr "Vyberte prostředí"
 
 msgid "Pick an icon and a color, or upload a custom image. Defaults to the linked GitHub owner's avatar."
 msgstr "Vyberte ikonu a barvu nebo nahrajte vlastní obrázek. Ve výchozím stavu se použije avatar propojeného vlastníka na GitHubu."
@@ -20195,6 +20219,9 @@ msgstr "Tento účet už není připojený — vyberte jiný."
 msgid "That agent session has no conversation to open yet. It was started but never prompted."
 msgstr "Tato agentní relace zatím nemá konverzaci k otevření. Byla spuštěna, ale nikdy nedostala zadání."
 
+msgid "that computer"
+msgstr "ten počítač"
+
 msgid "That computer can't be reached"
 msgstr "Tento počítač není dostupný"
 
@@ -20494,8 +20521,14 @@ msgstr "Časový limit přesunu vypršel."
 msgid "The move was cancelled."
 msgstr "Přesun byl zrušen."
 
+msgid "The moved workspace shows on Home when it is ready."
+msgstr "Přesunutý pracovní prostor se zobrazí na Domů, až bude připraven."
+
 msgid "The name of your organization or team"
 msgstr "Název vaší organizace nebo týmu"
+
+msgid "The name shows in the sidebar."
+msgstr "Název se zobrazuje v postranním panelu."
 
 msgid "The network connection changed"
 msgstr "Síťové připojení se změnilo"
@@ -21179,6 +21212,9 @@ msgstr "Host tohoto pracovního prostoru je offline"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "Hostitel tohoto pracovního prostoru používá starší službu hostitele, než tato aplikace podporuje. Aktualizujte ji pro opětovné připojení; pracovní prostor a jeho soubory zůstanou nedotčené."
+
+msgid "This workspace's project is not on GitHub."
+msgstr "Projekt tohoto pracovního prostoru není na GitHubu."
 
 msgid "Thorough reasoning effort"
 msgstr "Důkladné uvažování"
@@ -21940,6 +21976,9 @@ msgstr "Aktualizovat na Google Play"
 
 msgid "Update Paradev from Google Play to continue."
 msgstr "Pokud chcete pokračovat, aktualizujte Paradev z Google Play."
+
+msgid "Update Paradev on {sourceName} to move its workspaces from this phone."
+msgstr "Aktualizujte Paradev na {sourceName}, abyste mohli jeho pracovní prostory přesouvat z tohoto telefonu."
 
 msgid "Update Paradev on that device. In-app updates require a supported standalone install and a released app version."
 msgstr "Aktualizujte Paradev na daném zařízení. Aktualizace z aplikace vyžadují podporovanou samostatnou instalaci a vydanou verzi aplikace."
@@ -23444,6 +23483,9 @@ msgstr "Vaše projekty a pracovní prostory z v1 se přenášejí do nového Par
 
 msgid "Your version: {currentVersion}"
 msgstr "Vaše verze: {currentVersion}"
+
+msgid "Your work, including uncommitted changes, is pushed to a new branch on the remote. A cloud workspace starts from that branch in the environment you pick, and each Claude chat continues there. Agents that are working stop first. Terminals and other chats stay here."
+msgstr "Vaše práce, včetně nepotvrzených změn, se odešle do nové větve ve vzdáleném repozitáři. Z této větve se v prostředí, které vyberete, spustí cloudový pracovní prostor a každý chat s Claude tam bude pokračovat. Agenti, kteří pracují, se nejprve zastaví. Terminály a ostatní chaty zůstanou zde."
 
 msgid "Your workspace admin turns on device code sign-in for Codex."
 msgstr "Přihlášení kódem zařízení pro Codex zapíná správce vašeho pracovního prostoru."

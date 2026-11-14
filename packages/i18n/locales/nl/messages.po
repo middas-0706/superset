@@ -10958,6 +10958,9 @@ msgstr "De plugins verschijnen zodra de synchronisatie klaar is."
 msgid "Its replies go with it."
 msgstr "De antwoorden worden ook verwijderd."
 
+msgid "Its work, including uncommitted changes, is pushed to a new branch. A workspace on {computerName} starts from that branch, and each Claude chat continues there. Agents that are working stop first. Terminals and other chats stay where they are."
+msgstr "Het werk, inclusief niet-gecommitte wijzigingen, wordt naar een nieuwe branch gepusht. Een werkruimte op {computerName} begint vanaf die branch, en elke Claude-chat gaat daar verder. Agents die aan het werk zijn, stoppen eerst. Terminals en andere chats blijven waar ze zijn."
+
 msgid "Its workspaces and terminals are unavailable until it restarts. Use the Paradev tray menu > Host Service > Restart."
 msgstr "De werkruimtes en terminals zijn niet beschikbaar tot de service opnieuw start. Gebruik het Paradev-menu in de menubalk > Hostservice > Opnieuw starten."
 
@@ -12446,8 +12449,20 @@ msgstr "Cloudwerk verhuizen"
 msgid "Move focus between the main tabs and the right sidebar, and open the sidebar if it is closed"
 msgstr "De focus verplaatsen tussen de hoofdtabbladen en de rechterzijbalk, en de zijbalk openen als die gesloten is"
 
+msgid "Move this workspace to {computerName}?"
+msgstr "Deze werkruimte naar {computerName} verplaatsen?"
+
+msgid "Move this workspace to the cloud?"
+msgstr "Deze werkruimte naar de cloud verplaatsen?"
+
+msgid "Move to"
+msgstr "Verplaatsen naar"
+
 msgid "Move to background"
 msgstr "Naar de achtergrond"
+
+msgid "Move to cloud"
+msgstr "Naar cloud verplaatsen"
 
 msgid "Move to group"
 msgstr "Naar groep verplaatsen"
@@ -12664,6 +12679,9 @@ msgstr "Nieuwe chat"
 
 msgid "New Chat"
 msgstr "Nieuwe chat"
+
+msgid "New cloud workspace"
+msgstr "Nieuwe cloudwerkruimte"
 
 msgid "New environment"
 msgstr "Nieuwe omgeving"
@@ -12955,6 +12973,9 @@ msgstr "Er zijn geen Chrome-, Brave-, Arc- of andere Chromium-browsers gevonden.
 
 msgid "No Claude or Codex usage found on this machine yet. Join now and you'll appear once you've used an agent."
 msgstr "Nog geen Claude- of Codex-gebruik gevonden op deze machine. Doe nu mee, dan verschijn je zodra je een agent hebt gebruikt."
+
+msgid "No cloud environment opens {repository}."
+msgstr "Geen cloudomgeving opent {repository}."
 
 msgid "No cloud workspaces"
 msgstr "Geen cloudwerkruimtes"
@@ -15257,6 +15278,9 @@ msgstr "Kies een werkruimte"
 
 msgid "Pick a workspace whose agent is waiting for your input, has finished since you last looked, or is still running"
 msgstr "Kies een werkruimte waarvan de agent op je invoer wacht, klaar is sinds je laatst keek of nog bezig is"
+
+msgid "Pick an environment"
+msgstr "Kies een omgeving"
 
 msgid "Pick an icon and a color, or upload a custom image. Defaults to the linked GitHub owner's avatar."
 msgstr "Kies een icoon en een kleur, of upload een eigen afbeelding. Standaard is de avatar van de gekoppelde GitHub-eigenaar."
@@ -20195,6 +20219,9 @@ msgstr "Dit account is niet meer verbonden — kies een ander."
 msgid "That agent session has no conversation to open yet. It was started but never prompted."
 msgstr "Die agentsessie heeft nog geen gesprek om te openen. Hij is gestart maar nooit aangestuurd."
 
+msgid "that computer"
+msgstr "die computer"
+
 msgid "That computer can't be reached"
 msgstr "Die computer is niet bereikbaar"
 
@@ -20494,8 +20521,14 @@ msgstr "Er is een time-out opgetreden bij het verplaatsen."
 msgid "The move was cancelled."
 msgstr "Het verplaatsen is geannuleerd."
 
+msgid "The moved workspace shows on Home when it is ready."
+msgstr "De verplaatste werkruimte verschijnt op Start zodra hij klaar is."
+
 msgid "The name of your organization or team"
 msgstr "De naam van je organisatie of team"
+
+msgid "The name shows in the sidebar."
+msgstr "De naam staat in de zijbalk."
 
 msgid "The network connection changed"
 msgstr "De netwerkverbinding is gewijzigd"
@@ -21179,6 +21212,9 @@ msgstr "De host van deze werkruimte is offline"
 
 msgid "This workspace's host runs an older host service than this app supports. Update it to reconnect; the workspace and its files are untouched."
 msgstr "De host van deze werkruimte draait een oudere hostservice dan deze app ondersteunt. Werk hem bij om opnieuw te verbinden; de werkruimte en de bestanden blijven onaangeroerd."
+
+msgid "This workspace's project is not on GitHub."
+msgstr "Het project van deze werkruimte staat niet op GitHub."
 
 msgid "Thorough reasoning effort"
 msgstr "Grondige redeneerinspanning"
@@ -21940,6 +21976,9 @@ msgstr "Bijwerken via Google Play"
 
 msgid "Update Paradev from Google Play to continue."
 msgstr "Werk Paradev bij via Google Play om door te gaan."
+
+msgid "Update Paradev on {sourceName} to move its workspaces from this phone."
+msgstr "Werk Paradev bij op {sourceName} om de werkruimten ervan vanaf deze telefoon te verplaatsen."
 
 msgid "Update Paradev on that device. In-app updates require a supported standalone install and a released app version."
 msgstr "Werk Paradev bij op dat apparaat. Updates vanuit de app vereisen een ondersteunde zelfstandige installatie en een uitgebrachte appversie."
@@ -23444,6 +23483,9 @@ msgstr "Je v1-projecten en -workspaces worden overgezet naar het nieuwe Paradev.
 
 msgid "Your version: {currentVersion}"
 msgstr "Jouw versie: {currentVersion}"
+
+msgid "Your work, including uncommitted changes, is pushed to a new branch on the remote. A cloud workspace starts from that branch in the environment you pick, and each Claude chat continues there. Agents that are working stop first. Terminals and other chats stay here."
+msgstr "Je werk, inclusief niet-gecommitte wijzigingen, wordt naar een nieuwe branch op de remote gepusht. Een cloudwerkruimte start vanaf die branch in de omgeving die je kiest, en elke Claude-chat gaat daar verder. Agents die bezig zijn, stoppen eerst. Terminals en andere chats blijven hier."
 
 msgid "Your workspace admin turns on device code sign-in for Codex."
 msgstr "De beheerder van je workspace zet aanmelden met apparaatcode voor Codex aan."
